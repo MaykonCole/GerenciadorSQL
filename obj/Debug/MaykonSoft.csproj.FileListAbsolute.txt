@@ -1,0 +1,17 @@
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.csprojAssemblyReference.cache
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.Form1.resources
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.Properties.Resources.resources
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.csproj.GenerateResource.cache
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.csproj.CoreCompileInputs.cache
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\bin\Debug\MaykonSoft.exe.config
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\bin\Debug\MaykonSoft.exe
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\bin\Debug\MaykonSoft.pdb
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.exe
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.pdb
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.Form2.resources
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.Form3.resources
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.telaConexao.resources
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\bin\Debug\MaykonSoft.exe.manifest
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\bin\Debug\MaykonSoft.application
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.exe.manifest
+C:\Users\DevDesiger\Documents\C#Intro\MaykonSoft\obj\Debug\MaykonSoft.application
