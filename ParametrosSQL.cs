@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaykonSoft
 {
-    class ParametrosSQL
+    public class ParametrosSQL
 
 
     {
@@ -17,8 +17,7 @@ namespace MaykonSoft
         public string Senha { get; set; }
 
 
-        // Construtor Vazio
-        public ParametrosSQL()
+       public ParametrosSQL()
         {
 
         }

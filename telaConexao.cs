@@ -9,22 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaykonSoft;
-using SQLServer;
+
 
 namespace MaykonSoft
 {
     public partial class telaConexao : Form
     {
-        public telaConexao()
+        public  telaConexao()
         {
             InitializeComponent();
 
+            ParametrosSQL m = new ParametrosSQL();
 
+           
 
 
         }
 
-
+     
 
         private void TelaConexao_Load(object sender, EventArgs e)
         {
@@ -56,42 +58,38 @@ namespace MaykonSoft
 
         }
 
-       /* public ParametrosSQL ParSQL()
-       {
-            ParametrosSQL p = new ParametrosSQL();
 
-           p.Servidor = "";
-          p.User = "";
-            p.Senha = "";
-         p.Servidor = textServ.Text;
-           p.User = textUser.Text;
-          p.Senha = textSenha.Text;
-           return p;
+        public ParametrosSQL ParSQL()
+        {
+            ParametrosSQL m = new ParametrosSQL();
 
-            }*/
+            m.Servidor = textServ.Text;
+            m.User = textUser.Text;
+            m.Senha = textSenha.Text;
+
+            return m;
+        }
 
 
 
-            // private readonly string string_conexao = "Data Source=.\\sqlng;Initial Catalog=ng;User ID=sa;Password=ng@mastermaq2010";
-            private void Button1_Click(object sender, EventArgs e)
+        // private readonly string string_conexao = "Data Source=.\\sqlng;Initial Catalog=ng;User ID=sa;Password=ng@mastermaq2010";
+        private void Button1_Click(object sender, EventArgs e)
             {
 
                 // Cria objeto que possui as classes de Conexao
-                Conector j = new Conector();
-                // Cria recurso para conexao ao banco SQL
-                //SqlConnection conexao = new SqlConnection();
+                Conexao j = new Conexao();
+            // Cria recurso para conexao ao banco SQL
+            //SqlConnection conexao = new SqlConnection();
 
-                ParametrosSQL y = new ParametrosSQL();
+            ParametrosSQL d = ParSQL();
 
-            string serv = textServ.Text;
-            string sen = textSenha.Text;
-            string us = textUser.Text;
-
+            // String de Conexao de acordo os valores dos atributos do objeto Parametro
+            string result = j.Conection(d.Servidor, d.User, d.Senha);
 
 
+        
 
-                // String de Conexao de acordo os valores dos atributos do objeto Parametro
-                string result = j.testeConexao(serv,us,sen);
+           
 
 
 
@@ -108,16 +106,22 @@ namespace MaykonSoft
                     meu_segundo_form.ShowDialog();
 
 
-                }
-
-
+              
 
 
             }
 
 
+         
+
         }
+
+      
+
     }
+
+   
+}
       
 
         

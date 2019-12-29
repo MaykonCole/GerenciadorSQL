@@ -1,13 +1,6 @@
-﻿using SQLServer;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace MaykonSoft
 {
@@ -16,8 +9,40 @@ namespace MaykonSoft
         public Form1()
         {
             InitializeComponent();
-        }
+          
+            
+        
+            
+    
+    }
 
+        public void executaComando(string c)
+        {
+            Conexao con = new Conexao();
+
+
+            
+            
+
+
+                string comando = c;
+            
+
+                try
+                {
+
+                    con.executeQuery(comando);
+                    textResult.Text = "Comando executado com sucesso!";
+
+
+
+                }
+                catch (Exception m)
+                {
+                    textResult.Text = m.Message;
+                }
+            
+        }
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -35,42 +60,19 @@ namespace MaykonSoft
 
         private void BtnExecute_Click(object sender, EventArgs e)
         {
-
-            // Cria Objeto de Conexao
-            Conector con = new Conector();
-
-            
-
-            // Valida se foi preenchido algo no TextBox TSQL
             if (textQuery.Text.Length < 1)
             {
-              
-                MessageBox.Show("Não foi especificado nenhum comando no painel TSQL");
-                
-           
+
+                MessageBox.Show("Não foi especificado a nova senha do usuário SA!");
+
+
             }
 
-            // Caso existir alguma parametro no TSQL ser executado
             else
             {
-                
-                string comando = textQuery.Text;
+                executaComando(textQuery.Text);
 
-                try
-                {
-                  
-                        con.executeQuery(".\\sqlng", "sa", "bel",comando);
-                        textResult.Text = "Comando realizado com sucesso.";
-                 
-
-                }
-                catch (Exception m)
-                {
-                    textResult.Text = m.Message;
-                }
             }
-           
-
 
         }
 
@@ -107,6 +109,67 @@ namespace MaykonSoft
 
             
             
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            // Valida se foi preenchido 
+            if (textSenhaSA.Text.Length < 1)
+            {
+
+                MessageBox.Show("Não foi especificado a nova senha do usuário SA!");
+
+
+            }
+
+            else
+            {
+
+
+                executaComando("USE[master] " + "\n" +
+
+                            "ALTER LOGIN[sa] WITH PASSWORD = N'" + textSenhaSA.Text + "'" + "\n");
+            }
+    }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+            textMB.Text = Regex.Replace(textMB.Text, "[^0-9]", "");
+            // Valida se foi preenchido 
+            if (textMB.Text.Length < 1)
+            {
+
+                MessageBox.Show("Não foi especificado nenhum valor númerico!");
+
+
+            }
+
+            else
+            {
+
+
+                executaComando("EXEC sys.sp_configure N'show advanced options', N'1'  RECONFIGURE WITH OVERRIDE" + "\n" +
+
+                    "EXEC sys.sp_configure N'max server memory (MB)', N'"+textMB.Text+"'" + "\n" +
+
+                    "EXEC sys.sp_configure N'show advanced options', N'1'  RECONFIGURE WITH OVERRIDE" + "\n" );
+            }
+        }
+
+        private void TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MaykonSoft.exe" version="1.0.0.1" publicKeyToken="f67ef9d3172f3550" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MaykonSoft" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MaykonSoft.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opções de Manifesto UAC
+          Se desejar mudar o nível de Controle de Conta de Usuário do Windows, substitua o
+          nó requestedExecutionLevel por um dos seguintes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Se deseja usar a Virtualização de Arquivos e Registro para compatibilidade
+         com versões anteriores, exclua o nó requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaykonSoft.exe" size="21016">
+      <assemblyIdentity name="MaykonSoft" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>OVpRMHG/XKnM4vG0Bve5qK2sUg+mRl73fhWCrhoj1/Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MaykonSoft.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DEVDESIGNER-PC\DevDesigner" issuerKeyHash="36fa436b3b35de742cedc6df1070a622e4f6fe33" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>gAbW0rfxzSxsp8WoDZXMuO4zigOlyasVFQIdWPGN6Wg=</DigestValue></Reference></SignedInfo><SignatureValue>ECzLyC9T/oA45i9deYkLgF/DONoM0BLAeJsiF+F8rc6+4NSCqfuvpU3dZ3yWrQTHBpvAoL8uI9qwK8FThTkyAHRrIQMjGpuoZGvhrOYXBMtJLGTetojTL/rQOPCvV2VFPRxAwwYUutJW16yw8fjdxOY7jQu41qsV0mqnp0VqUkg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>mcZCmaVKYPrmDOHw49ldu5okhMuAsxVkMDT5e1dze3bl0jtsQypc7F7njSP3lVYeXYv9r8+vX4z+3BpneJXVWLONHyoH22Tp9EZpLXJp6jGICsPx8qKNolRHXaF0FgnIhn27mIYrvgivkzL5K1xqAy7FOl1jzza1q8iddvi2/aE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="68e98df1581d021515abc9a5038a33eeb8cc950da8c5a76c2ccdf1b7d2d60680" Description="" Url=""><as:assemblyIdentity name="MaykonSoft.exe" version="1.0.0.1" publicKeyToken="f67ef9d3172f3550" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DEVDESIGNER-PC\DevDesigner</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EhYCkgsUMutS9LXfge/GB3nh1CcMg33kIMQFQOywkRo=</DigestValue></Reference></SignedInfo><SignatureValue>OnRycv2THlNvq0VQK1t5srtKqXagEFwGcSypfsg4gHvfhoaEAb6oKyhUWI/XRdGeMIpcq0Lpln+0joqWLXUAUMebvdkG9TComneY1tFsyuwyZMSJZm/o8sk2D/lGMFKQMmv169T5Tci/IZ7pz/ptsZfizzB4zayb3FuLqi4c3+Y=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>mcZCmaVKYPrmDOHw49ldu5okhMuAsxVkMDT5e1dze3bl0jtsQypc7F7njSP3lVYeXYv9r8+vX4z+3BpneJXVWLONHyoH22Tp9EZpLXJp6jGICsPx8qKNolRHXaF0FgnIhn27mIYrvgivkzL5K1xqAy7FOl1jzza1q8iddvi2/aE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICATCCAWqgAwIBAgIQYHqVYHMZQYVBqIGxuW2F+zANBgkqhkiG9w0BAQsFADA/MT0wOwYDVQQDHjQARABFAFYARABFAFMASQBHAE4ARQBSAC0AUABDAFwARABlAHYARABlAHMAaQBnAG4AZQByMB4XDTE5MTIyMTIxNTUyOFoXDTIwMTIyMTAzNTUyOFowPzE9MDsGA1UEAx40AEQARQBWAEQARQBTAEkARwBOAEUAUgAtAFAAQwBcAEQAZQB2AEQAZQBzAGkAZwBuAGUAcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAmcZCmaVKYPrmDOHw49ldu5okhMuAsxVkMDT5e1dze3bl0jtsQypc7F7njSP3lVYeXYv9r8+vX4z+3BpneJXVWLONHyoH22Tp9EZpLXJp6jGICsPx8qKNolRHXaF0FgnIhn27mIYrvgivkzL5K1xqAy7FOl1jzza1q8iddvi2/aECAwEAATANBgkqhkiG9w0BAQsFAAOBgQA83/ZxYdvx0uEUbgeZeAtqFBPmQ7nioYjNk7kAST4/lpvcJAQlkjugtq0gWElJDl1Ux5x8k9FFyMbYi189ztqVcYmnvdhsb7KPOdX1CqY4o2XPlzTm5BrZ+6eCaLVIBSsnjSva/2QLWxkmIiQznPLqaQB/UaHBVqXEgzKc0JBM0g==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
