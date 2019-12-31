@@ -19,7 +19,7 @@ namespace MaykonSoft
         {
             InitializeComponent();
 
-            ParametrosSQL m = new ParametrosSQL();
+        
 
            
 
@@ -84,8 +84,8 @@ namespace MaykonSoft
             ParametrosSQL d = ParSQL();
 
             // String de Conexao de acordo os valores dos atributos do objeto Parametro
-            string result = j.Conection(d.Servidor, d.User, d.Senha);
-
+            //string result = j.Conection(d.Servidor, d.User, d.Senha);
+            
 
         
 
@@ -95,7 +95,7 @@ namespace MaykonSoft
 
 
                 // Valida se a Conexão foi realizada com sucesso
-                if (result.Equals("sim"))
+                if (j.Conection(d.Servidor, d.User, d.Senha) != null)
                 {
                     // Oculta o Form TelaConexao
                     this.Visible = false;

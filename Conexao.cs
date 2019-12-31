@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -13,23 +14,51 @@ namespace MaykonSoft
         SqlConnection con = new SqlConnection();
 
 
-
-        public string Conection(string serv, string user, string senha)
+        public class Session
         {
+            internal static string _connection = string.Empty;
+
+            public static string ConnectionString
+            {
+                get
+                {
+                    if (string.IsNullOrEmpty(_connection))
+                        _connection = "Data Source=.\\sqlng;Initial Catalog=ng;User ID=sa;Password=bel";
+                    return _connection;
+                }
+            }
+        }
+
+        public class UtilBD
+        {
+            public static DbConnection Connect(string connectionString)
+            {
+                var oConn = new SqlConnection("Data Source=.\\sqlng;Initial Catalog=ng;User ID=sa;Password=bel");
+                oConn.Open();
+                return oConn;
+            }
+        }
+
+            public SqlConnection Conection(string serv, string user, string senha)
+        {
+
+            desconectar();
             con.ConnectionString = "Data Source=" + serv + ";Initial Catalog=ng;User ID=" + user + ";Password=" + senha + "";
 
             try
             {
                 con.Open();
-                return "sim";
+               
+                return con;
 
             }
 
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                return "nao";
+                return null;
             }
+
         }
 
         public SqlConnection conectar()
@@ -47,6 +76,24 @@ namespace MaykonSoft
             {
                 con.Close();
             }
+
+        }
+
+        // um método com exemplo de conexão e execução
+        public string ExecutarComandoSQL(String s)
+        {
+
+          
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = s;
+           var oConn = Conection(".\\sqlng", "sa", "bel") ;
+                cmd.Connection = oConn;
+          
+            String result = (string)cmd.ExecuteScalar();
+
+            //MessageBox.Show(result);
+            
+            return result;
 
         }
 
@@ -98,7 +145,6 @@ namespace MaykonSoft
                 }
             }
 
-            //MessageBox.Show((string)reader.GetSqlString(0));
 
         }
     }

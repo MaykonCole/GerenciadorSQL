@@ -5,27 +5,71 @@ using System.Text.RegularExpressions;
 namespace MaykonSoft
 {
     public partial class Form1 : Form
+
+           
     {
         public Form1()
         {
             InitializeComponent();
-          
-            
-        
-            
-    
-    }
+
+            Conexao con = new Conexao();
+
+            String x  = con.ExecutarComandoSQL("select @@version");
+            string newx = x;
+
+            if (x.Contains("Express"))
+            {
+                newx = x.Replace("Microsoft", "Express");
+            }
+
+            if (x.Contains("Standard"))
+            {
+                newx = x.Replace("Microsoft", "Standard");
+
+            }
+                if (x.Contains("Developer"))
+                {
+                    newx = x.Replace("Microsoft", "Developer");
+                }
+
+                if (x.Contains("Evaluation"))
+                {
+                    newx = x.Replace("Microsoft", "Evaluation");
+                }
+
+                if (x.Contains("Enterprise"))
+                {
+                    newx = x.Replace("Microsoft", "Enterprise");
+                }
+
+
+                textVersion.Text = newx.Trim();
+
+                String y = con.ExecutarComandoSQL("select SERVERPROPERTY('collation')");
+                textCollation.Text = y.Trim();
+
+            String z = con.ExecutarComandoSQL("select @@LANGUAGE");
+            textLing.Text = z.Trim();
+
+            String w = con.ExecutarComandoSQL("select @@SERVERNAME");
+            textServ.Text = w.Trim();
+
+
+
+
+
+        }
 
         public void executaComando(string c)
         {
-            Conexao con = new Conexao();
 
 
-            
-            
+        Conexao con = new Conexao();
 
 
-                string comando = c;
+
+
+        string comando = c;
             
 
                 try
@@ -63,7 +107,7 @@ namespace MaykonSoft
             if (textQuery.Text.Length < 1)
             {
 
-                MessageBox.Show("Não foi especificado a nova senha do usuário SA!");
+                MessageBox.Show("Não foi especificado nenhum comando no painel T-SQL!");
 
 
             }
@@ -170,6 +214,13 @@ namespace MaykonSoft
         private void TextBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            
+
+           
         }
     }
 }
